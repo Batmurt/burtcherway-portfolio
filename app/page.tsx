@@ -39,7 +39,7 @@ export default function Home() {
                       The Chalice of the Dread King
                     </h3>
                     <p className="text-white text-xl leading-relaxed">
-                      A faithful recreation of lost 90s text adventure The Chalice of the Dread King, the third and final game in the Dread King series from Black Lizard Software. Originally ported in a limited run, we're working with Black Lizard to bring this cult classic to a new generation of players in 2025.
+                      A faithful recreation of lost 90s text adventure The Chalice of the Dread King, the third and final game in the Dread King series from Black Lizard Software. Originally ported in a limited run, we&apos;re working with Black Lizard to bring this cult classic to a new generation of players in 2025.
                     </p>
                   </div>
                 </div>
@@ -123,9 +123,9 @@ export default function Home() {
           <h2 className="text-5xl md:text-6xl font-bold text-center mb-16 text-glow">About Us</h2>
           <div className="space-y-6 text-gray-600 dark:text-gray-400 text-base leading-relaxed">
             <p className="text-xl font-medium">We offer bespoke creative & digital services for individual, charity and corporate clients who are looking to engage with the world in a different way.</p>
-            <p>We like challenges. We don't think challenges have to mean stress. We like to solve problems, be helpful, and have some fun.
+            <p>We like challenges. We don&apos;t think challenges have to mean stress. We like to solve problems, be helpful, and have some fun.
             </p>
-            <p>Past projects include unique live experiences and events, combining adventure, games, technology and performances. We've worked with a broad range of talented people on everything from big festival productions to one-to-one encounters.
+            <p>Past projects include unique live experiences and events, combining adventure, games, technology and performances. We&apos;ve worked with a broad range of talented people on everything from big festival productions to one-to-one encounters.
             </p>
             <p>We also make creative purely digital experiences - games, puzzles and online stories - which are better for you than doomscrolling.</p>
             <p>We especially love projects which combine the two.</p>
