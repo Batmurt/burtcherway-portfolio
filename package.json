@@ -6,8 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "node_modules/next/dist/bin/next start",
-    "lint": "next lint"
-    
+    "lint": "next lint",
+    "export": "next build",
+    "deploy": "npm run export"
   },
   "dependencies": {
     "autoprefixer": "^10.4.21",
