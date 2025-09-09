@@ -34,11 +34,14 @@ export default function Home() {
                 </video>
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-center px-16">
-                    <h3 className="text-8xl md:text-9xl font-bold text-white mb-6">
+                  <div className="text-center px-4 md:px-8 lg:px-16">
+                    <h3 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white mb-6">
                       The Chalice of the Dread King
                     </h3>
-                    <p className="text-white text-xl leading-relaxed">
+                    <p className="md:hidden text-sm text-white leading-relaxed">
+                      A faithful recreation of the lost 90s text adventure by Black Lizard Software. Coming 2025.
+                    </p>
+                    <p className="hidden md:block text-base lg:text-lg text-white leading-relaxed">
                       A faithful recreation of lost 90s text adventure The Chalice of the Dread King, the third and final game in the Dread King series from Black Lizard Software. Originally ported in a limited run, we&apos;re working with Black Lizard to bring this cult classic to a new generation of players in 2025.
                     </p>
                   </div>
@@ -63,11 +66,14 @@ export default function Home() {
                 </video>
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-center px-16">
-                    <h3 className="text-8xl md:text-9xl font-bold text-white mb-6">
+                  <div className="text-center px-4 md:px-8 lg:px-16">
+                    <h3 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white mb-6">
                       PAINBALL
                     </h3>
-                    <p className="text-white text-xl leading-relaxed">
+                    <p className="md:hidden text-sm text-white leading-relaxed">
+                      A tactical roguelike deckbuilder in the pleasingly familiar world of brutal bloodsport. Coming 2026.
+                    </p>
+                    <p className="hidden md:block text-base lg:text-lg text-white leading-relaxed">
                       Big hits, big egos, and big ethical questions plague a society in thrall to brutal bloodsport spectacle in this tactical roguelike 
   deckbuilder. Manage your team of Painballers, build your deck, and fight to the death in a pleasingly familiar dystopian vision where entertainment is the only escape. Coming 2026.
                     </p>
