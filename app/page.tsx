@@ -29,7 +29,7 @@ export default function Home() {
                 >
                   <source src="https://strgdsysburtcher.blob.core.windows.net/bway/video/cotd-teaser.mp4" type="video/mp4" />
                   <div className="w-full h-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center text-gray-500">
-                    Video not supported
+                    Sorry - video not supported
                   </div>
                 </video>
                 {/* Hover overlay */}
