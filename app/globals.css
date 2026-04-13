@@ -32,3 +32,46 @@ html {
 .text-glow:hover {
   text-shadow: 0 0 10px rgba(236, 72, 153, 0.7), 0 0 20px rgba(236, 72, 153, 0.5), 0 0 30px rgba(236, 72, 153, 0.3);
 }
+
+.services-wall {
+  position: relative;
+  height: 108px;
+  overflow: hidden;
+  padding: 10px 0;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
+}
+
+.services-track {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  justify-content: center;
+  line-height: 1.4;
+  animation: servicesDrift 16s linear infinite;
+}
+
+.services-word {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  color: rgba(237, 237, 237, 0.48);
+  font-weight: 400;
+}
+
+.services-word:nth-child(3n) {
+  color: rgba(237, 237, 237, 0.72);
+}
+
+.services-word:nth-child(5n) {
+  color: rgba(237, 237, 237, 0.35);
+}
+
+@keyframes servicesDrift {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-42px);
+  }
+}

@@ -1,4 +1,25 @@
 export default function Home() {
+  const services = [
+    'experience design.',
+    'event scripts.',
+    'copywriting.',
+    'digital production.',
+    'game design.',
+    'web development.',
+    'seo & analytics.',
+    'digital marketing.',
+    'puzzles & ARGs.',
+    'strategy.',
+    'interactive stories.',
+    'community projects.',
+    'workshops.',
+    'live moments.',
+    'installation concepts.',
+    'creative direction.',
+    'playtests.',
+
+  ]
+
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
@@ -9,6 +30,20 @@ export default function Home() {
         <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 text-center max-w-2xl">
           This Could Be A Most Unusual Day
         </p>
+        <div className="mt-8 w-full max-w-3xl">
+          <p className="text-center text-sm md:text-base tracking-[0.2em] uppercase text-gray-500 dark:text-gray-500 mb-4">
+            Experiential and Digital Creative Services
+          </p>
+          <div className="services-wall" aria-label="Creative services list">
+            <div className="services-track">
+              {services.concat(services).map((service, idx) => (
+                <span key={`${service}-${idx}`} className="services-word">
+                  {service}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Projects Section */}
@@ -39,7 +74,7 @@ export default function Home() {
                       The Chalice of the Dread King
                     </h3>
                     <p className="md:hidden text-sm text-white leading-relaxed">
-                      A faithful recreation of the lost 90s text adventure by Black Lizard Software. Coming 2025.
+                      A faithful recreation of the lost 90s text adventure by Black Lizard Software. Coming 2026.
                     </p>
                     <p className="hidden md:block text-base lg:text-lg text-white leading-relaxed">
                       A faithful recreation of lost 90s text adventure The Chalice of the Dread King, the third and final game in the Dread King series from Black Lizard Software. Originally ported in a limited run, we&apos;re working with Black Lizard to bring this cult classic to a new generation of players in 2025.
@@ -49,7 +84,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* The Chalice of the Dread King */}
+            {/* Painball */}
             <div className="group relative cursor-pointer">
               <div className="relative w-full aspect-video rounded-lg overflow-hidden">
                 <video 
@@ -75,7 +110,7 @@ export default function Home() {
                     </p>
                     <p className="hidden md:block text-base lg:text-lg text-white leading-relaxed">
                       Big hits, big egos, and big ethical questions plague a society in thrall to brutal bloodsport spectacle in this tactical roguelike 
-  deckbuilder. Manage your team of Painballers, build your deck, and fight to the death in a pleasingly familiar dystopian vision where entertainment is the only escape. Coming 2026.
+  deckbuilder. Manage your team of Painballers, build your deck, and fight to the death in a pleasingly familiar dystopian vision where entertainment is the only escape. Coming 2027.
                     </p>
                   </div>
                 </div>
