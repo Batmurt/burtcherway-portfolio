@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import CaseStudies from '@/components/CaseStudies'
 
 export default function Home() {
   const services = [
@@ -39,7 +40,7 @@ export default function Home() {
           <div className="services-wall" aria-label="Creative services list">
             <div className="services-track">
               {services.concat(services).map((service, idx) => (
-                <span key={`${service}-${idx}`} className="services-word">
+                <span key={`${service}-${idx}`} className="services-word">''
                   {service}
                 </span>
               ))}
@@ -102,6 +103,36 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+       {/* Contact Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center text-glow">
+          <h2 className="text-4xl font-bold mb-8">Contact Us</h2>
+          <a 
+            href="mailto:mat@burtcherway.com" 
+            className="inline-block hover:scale-110 transition-transform duration-200"
+            title="mat@burtcherway.com"
+          >
+            <svg 
+              width="48" 
+              height="48" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="white" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+              className="drop-shadow-lg"
+            >
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      {/* Case Studies Section */}
+      <CaseStudies />
 
       {/* Projects Section */}
       <section className="py-20">
@@ -179,32 +210,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center text-glow">
-          <h2 className="text-4xl font-bold mb-8">Contact Us</h2>
-          <a 
-            href="mailto:mat@burtcherway.com" 
-            className="inline-block hover:scale-110 transition-transform duration-200"
-            title="mat@burtcherway.com"
-          >
-            <svg 
-              width="48" 
-              height="48" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="white" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-              className="drop-shadow-lg"
-            >
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-          </a>
-        </div>
-      </section>
+     
 
       {/* Copyright Section */}
       <section className="py-8 px-6">
