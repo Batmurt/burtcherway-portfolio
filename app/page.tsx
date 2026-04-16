@@ -40,7 +40,7 @@ export default function Home() {
           <div className="services-wall" aria-label="Creative services list">
             <div className="services-track">
               {services.concat(services).map((service, idx) => (
-                <span key={`${service}-${idx}`} className="services-word">''
+                <span key={`${service}-${idx}`} className="services-word">
                   {service}
                 </span>
               ))}
@@ -66,7 +66,7 @@ export default function Home() {
               { name: 'Schweppes', slug: 'schweppes' },
               { name: 'Secret Cinema', slug: 'secretcinema' },
               { name: 'Standon', slug: 'standon' },
-              { name: 'Vault', slug: 'vault' },
+              { name: 'Vault Festival', slug: 'vault' },
               { name: 'Vodafone', slug: 'vodafone' },
               { name: 'Wilderness', slug: 'wilderness' }
             ].map((client) => (
