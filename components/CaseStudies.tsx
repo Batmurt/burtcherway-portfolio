@@ -13,33 +13,43 @@ interface CaseStudy {
 
 const caseStudies: CaseStudy[] = [
   {
-    id: 'immersive-adventure',
-    title: 'The Midnight Encounter',
-    body: 'A large-scale immersive adventure combining live performances, interactive technology, and participant choice. We designed the narrative structure, developed the companion app for real-time gameplay updates, and directed the live actor encounters that brought the story to life.',
-    date: '2024',
-    collaborators: 'Secret Cinema, Sandbox Productions',
-    video: 'https://strgdsysburtcher.blob.core.windows.net/bway/video/placeholder-case-study.mp4',
-  },
-  {
     id: 'brand-experience',
-    title: 'Festival Activation: The Distillery',
-    body: 'A multi-day experiential marketing campaign for a premium spirits brand at a major UK festival. We created the concept, designed the physical installation, built the interactive elements, and managed live performances throughout the event. The activation reached over 5,000 participants and generated significant brand engagement.',
-    date: '2023',
-    collaborators: 'Heineken, Festival Organizers',
-    leadImage: 'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/distillery-hero.webp',
-  },
-  {
-    id: 'digital-puzzle-game',
-    title: 'Across the Veil: Web Puzzle Experience',
-    body: 'A narrative-driven web puzzle game combining cryptography, image analysis, and community collaboration. Players progressed through increasingly complex challenges that revealed an overarching mystery. The experience built a dedicated community with participants solving puzzles together across forums and social media.',
-    date: '2022',
-    collaborators: 'Independent Production',
+    title: 'Disney: The Wonder Of Friendship',
+    body: 'A multi-sensorial pop-up event produced by Haygarth which enchanted 40,000 ticket buyers across London, Berlin, Paris, and Madrid. We provided scripting, narrative design and performer direction for this immersive experience that celebrated the magic of Disney\'s iconic friendships. The event featured a series of interactive rooms, featuring 360 projection, sensory experience and collaborative activities, each themed around some of Disney\'s most beloved characters.',
+    date: '2024',
+    collaborators: 'Haygarth, Disney',
     gallery: [
-      'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/veil-1.webp',
-      'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/veil-2.webp',
-      'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/veil-3.webp',
+      'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/wof-1.webp',
+      'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/wof-2.webp',
+      'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/wof-3.webp'
     ],
   },
+  {
+    id: 'immersive-adventure',
+    title: 'Who Let The Toys Out?',
+    body: 'A four-day interactive collaboration with 6FootStories for Standon Calling that seamlessly blended high-energy live activations, immersive storytelling, and game app tech with a prize in mind: golden tickets to the next year\'s festival. Audiences drove the narrative forward and earned points all weekend through physical challenges like laser tag and rc racing, unlockable one-on-one experiences, and roaming characters who recruited them as double agents, and a massive site-wide Lost Toy treasure hunt driven by a bespoke web application. The app featured QR-triggered riddles, "ToyDar" real-world geolocation proximity tracking, and badges, as well as awarding points dynamically for innovative and creative players.',
+    date: '2022',
+    collaborators: '6FootStories, Standon Calling',
+    gallery: [
+      'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/wltto-main.webp',
+      'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/wltto-collage-notext.webp',
+      'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/wltto-scrn1.png',
+      'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/wltto-photo1.webp',
+      'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/wltto-scrn2.png',
+      'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/wltto-scrn3.png'
+    ],
+  },
+  
+  // {
+  //   id: 'digital-puzzle-game',
+  //   title: 'Across the Veil: Web Puzzle Experience',
+  //   body: 'A narrative-driven web puzzle game combining cryptography, image analysis, and community collaboration. Players progressed through increasingly complex challenges that revealed an overarching mystery. The experience built a dedicated community with participants solving puzzles together across forums and social media.',
+  //   date: '2022',
+  //   collaborators: 'Independent Production',
+  //   leadImage: 'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/wltto.webp',
+  //   video: 'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/wltto-vid.mp4',
+    
+  // },
 ]
 
 export default function CaseStudies() {
