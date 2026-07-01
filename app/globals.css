@@ -5,11 +5,55 @@
 :root {
   --background: 233 230 213;
   --foreground: 43 43 43;
+  --accent-brown: 60 42 30;
+  --primary: 238 0 84;
+  --secondary: 0 189 237;
+  --accent-yellow: 237 217 0;
+  --accent-maroon: 152 51 86;
+  --accent-teal: 55 99 110;
+  --dark-cream: 193 190 173;
 }
 
 body {
   color: rgb(var(--foreground));
   background: rgb(var(--background));
+}
+
+.text-cream
+{
+  color: rgb(var(--background));
+}
+.text-primary
+{
+  color: rgb(var(--primary));
+}
+.text-secondary
+{
+  color: rgb(var(--secondary));
+}
+.text-accent-yellow
+{
+  color: rgb(var(--accent-yellow));
+}
+.text-accent-maroon
+{
+  color: rgb(var(--accent-maroon));
+}
+.text-accent-teal
+{
+  color: rgb(var(--accent-teal));
+}
+.text-accent-brown
+{
+  color: rgb(var(--accent-brown));
+}
+.text-dark-cream
+{
+  color: rgb(var(--dark-cream));
+}
+
+.angled {
+  transform: rotate(-2deg);
 }
 
 @layer utilities {
@@ -30,21 +74,99 @@ html {
   color: #983356;
 }
 
-/* Persistent tricolour stripe, sticky at the top of every page */
+/* Subtler alternative to Tailwind's blur-sm (4px) for soft-focus echo layers */
+.blur-soft {
+  filter: blur(1.2px);
+}
+.blur-softer {
+  filter: blur(0.9px);
+}
+.blur-ultra-soft {
+  filter: blur(0.5px);
+}
+
+/* Tricolour stripe, resting in normal flow right below the hero logotype.
+   Full-bleed (edge-to-edge) even though its parent has horizontal padding.
+   It's a flex item in the hero's centered column, so the negative margins
+   alone (no left/right offset) are what correctly pin it edge-to-edge --
+   adding a left/right offset on top double-shifts it off-centre. */
 .site-stripe {
-  position: sticky;
+  position: relative;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  height: 52px;
+}
+
+/* Docked bar: fixed to the viewport top, hidden above it until the natural
+   stripe scrolls out of view, then slides/fades down into place. */
+.site-stripe-docked {
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 50;
   width: 100%;
-  height: 30px;
-  overflow: hidden;
+  height: 52px;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.site-stripe-docked--visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Compact logotype that joins the docked bar */
+.site-stripe-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%, -35%) scale(0.7);
+  font-weight: 800;
+  background: rgb(var(--primary));
+  border-color: rgb(var(--primary));
+  border-radius: 10px;
+  border-width: 5px;
+  padding: 0px 10px;
+  font-size: 2.5rem;
+  text-shadow: rgb(var(--background)) 0 0 1px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.35s ease 0.05s, transform 0.35s ease 0.05s;
+}
+
+.site-stripe-docked--visible .site-stripe-logo {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-stripe-docked,
+  .site-stripe-logo {
+    transition: none;
+  }
 }
 
 .site-stripe-bands {
   position: absolute;
   inset: 0;
+  z-index: 1;
   display: flex;
   flex-direction: column;
+}
+
+/* Soft-focus echo: a blurred duplicate of the bands, sitting behind the crisp
+   copy, so the colour blooms softly past the stripe's hard edge (retro
+   gaussian-blur look from the logo) without smearing the crisp stripe itself. */
+.site-stripe-bands--soft {
+  z-index: -10;
+  filter: blur(0.9px);
+  opacity: 1;
 }
 
 .site-stripe-bands span {
@@ -52,51 +174,21 @@ html {
 }
 
 .site-stripe-bands span:nth-child(1) {
-  background: #EDD900;
+  background: rgb(var(--accent-yellow));
 }
 
 .site-stripe-bands span:nth-child(2) {
-  background: #983356;
+  background: rgb(var(--primary));
 }
 
 .site-stripe-bands span:nth-child(3) {
-  background: #37636E;
+  background: rgb(var(--secondary));
 }
-
-/* Morse code for "lets have fun" woven through the stripe as a drifting ticker */
-.site-stripe-morse {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
+.site-stripe-bands span:nth-child(4) {
+  background: rgb(var(--accent-teal));
 }
-
-.site-stripe-morse-track {
-  display: flex;
-  gap: 3em;
-  white-space: nowrap;
-  font-family: 'Courier New', monospace;
-  font-weight: 700;
-  font-size: 0.7rem;
-  letter-spacing: 0.3em;
-  color: rgb(var(--background));
-  animation: stripeDrift 40s linear infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .site-stripe-morse-track {
-    animation: none;
-  }
-}
-
-@keyframes stripeDrift {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+.site-stripe-bands span:nth-child(5) {
+  background: rgb(var(--accent-maroon));
 }
 
 .services-wall {

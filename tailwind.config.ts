@@ -17,6 +17,7 @@ export default {
         accentMaroon: '#983356',
         accentTeal: '#37636E',
         accentBrown: '#3C2A1E',
+        darkCream: '#C1BEAD',
       },
     },
   },

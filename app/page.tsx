@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import CaseStudies from '@/components/CaseStudies'
+import StickyHeader from '@/components/StickyHeader'
 
 export default function Home() {
   const services = [
@@ -29,14 +30,31 @@ export default function Home() {
     <main className="min-h-screen">
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col items-center justify-center px-6">
-        <h1 className="text-6xl md:text-8xl font-bold text-center mb-6 text-primary">
-          BurtcherWay
-        </h1>
-        <p className="text-xl md:text-2xl text-foreground/70 text-center max-w-2xl">
+        <div
+          aria-label="lets have fun, in morse code"
+          className="text-center text-[0.65rem] md:text-lg tracking-[0.1em] font-mono select-none blur-ultra-soft mb-5 "
+        >
+          <span className="text-accent-teal">.-.. . - ...</span>&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-accent-yellow">.... .- ...- .</span>&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-accent-maroon">..-. ..- -.</span>
+        </div>
+        <div className="relative">
+          <span
+            aria-hidden="true"
+            className="absolute mb-6 inset-0 flex items-center justify-center text-6xl md:text-8xl font-bold text-primary blur-soft opacity-70 select-none pointer-events-none "
+          >
+            BurtcherWay
+          </span>
+          <h1 className="relative text-6xl md:text-8xl font-bold text-center mb-6 text-primary ">
+            BurtcherWay
+          </h1>
+          
+        </div>
+        
+        <StickyHeader />
+        <p className="text-xl md:text-2xl text-accent-brown text-center max-w-2xl mt-6">
           This Could Be A Most Unusual Day
         </p>
         <div className="mt-8 w-full max-w-3xl">
-          <p className="text-center text-sm md:text-base tracking-[0.2em] uppercase text-foreground/50 mb-4">
+          <p className="text-center text-sm md:text-base tracking-[0.2em] uppercase text-accent-brown mb-4">
             Experiential and Digital Creative Services
           </p>
           <div className="services-wall" aria-label="Creative services list">
@@ -163,13 +181,13 @@ export default function Home() {
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="text-center px-4 md:px-8 lg:px-16">
-                    <h3 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white mb-6">
+                    <h3 className="text-4xl md:text-6xl lg:text-8xl font-bold text-cream mb-6">
                       The Chalice of the Dread King
                     </h3>
-                    <p className="md:hidden text-sm text-white leading-relaxed">
+                    <p className="md:hidden text-sm text-cream leading-relaxed">
                       A faithful recreation of the lost 90s text adventure by Black Lizard Software. Coming 2026.
                     </p>
-                    <p className="hidden md:block text-base lg:text-lg text-white leading-relaxed">
+                    <p className="hidden md:block text-base lg:text-lg text-cream leading-relaxed">
                       A faithful recreation of lost 90s text adventure The Chalice of the Dread King, the third and final game in the Dread King series from Black Lizard Software. Originally ported in a limited run, we&apos;re working with Black Lizard to bring this cult classic to a new generation of players in 2026.
                     </p>
                   </div>
@@ -195,13 +213,13 @@ export default function Home() {
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="text-center px-4 md:px-8 lg:px-16">
-                    <h3 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white mb-6">
+                    <h3 className="text-4xl md:text-6xl lg:text-8xl font-bold text-cream mb-6">
                       PAINBALL
                     </h3>
-                    <p className="md:hidden text-sm text-white leading-relaxed">
+                    <p className="md:hidden text-sm text-cream leading-relaxed">
                       A tactical roguelike deckbuilder in the pleasingly familiar world of brutal bloodsport. Coming 2026.
                     </p>
-                    <p className="hidden md:block text-base lg:text-lg text-white leading-relaxed">
+                    <p className="hidden md:block text-base lg:text-lg text-cream leading-relaxed">
                       Big hits, big egos, and big ethical questions plague a society in thrall to brutal bloodsport spectacle in this tactical roguelike 
   deckbuilder. Manage your team of Painballers, build your deck, and fight to the death in a pleasingly familiar dystopian vision where entertainment is the only escape. Coming 2027.
                     </p>
@@ -220,7 +238,7 @@ export default function Home() {
       {/* Copyright Section */}
       <section className="py-8 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xs text-foreground/40">
+          <p className="text-xs text-accent-brown">
             © Burtcher Way Ltd.<br />
             Registered in England and Wales, Company No. 13488053
           </p>

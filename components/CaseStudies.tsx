@@ -11,6 +11,7 @@ interface CaseStudy {
   leadImage?: string
   video?: string
   gallery?: string[]
+  galleryType?: 'grid' | 'small-grid' | 'carousel'
   backgroundColor?: AccentColor
   textColor?: AccentColor
 }
@@ -47,18 +48,13 @@ const caseStudies: CaseStudy[] = [
     textColor: 'cream',
     gallery: [
       'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/gcl-00.webp',
-      'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/gcl-07.webp',
-      'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/gcl-04.webp',
-
+      'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/gcl-09.webp',
       'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/gcl-01.webp',
       'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/gcl-03.webp',
       'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/gcl-02.webp',
-
-      'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/gcl-05.webp',
       'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/gcl-06.webp',
-      'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/gcl-08.webp',
-
     ],
+    galleryType: 'small-grid'
   }, 
   {
     id: 'brand-experience',
@@ -68,6 +64,7 @@ const caseStudies: CaseStudy[] = [
     collaborators: 'Haygarth, Disney',
     backgroundColor: 'maroon',
     textColor: 'cream',
+    galleryType: 'grid',
     gallery: [
       'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/wof-1.webp',
       'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/wof-2.webp',
@@ -82,6 +79,7 @@ const caseStudies: CaseStudy[] = [
     backgroundColor: 'yellow',
     textColor: 'teal',
     collaborators: '6FootStories, Standon Calling',
+    galleryType: 'grid',
     gallery: [
       'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/wltto-main.webp',
       'https://strgdsysburtcher.blob.core.windows.net/bway/images/case-study/wltto-collage-notext.webp',
@@ -152,8 +150,23 @@ export default function CaseStudies() {
                     )}
 
                     {/* Gallery */}
-                    {study.gallery && (
+                    {study.gallery && study.galleryType === 'grid' && (
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        {study.gallery.map((image, idx) => (
+                          <div key={idx} className="relative w-full aspect-square rounded-lg overflow-hidden">
+                            <Image
+                              src={image}
+                              alt={`${study.title} gallery image ${idx + 1}`}
+                              fill
+                              className="object-cover"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {study.gallery && study.galleryType === 'small-grid' && (
+                      <div className="grid grid-cols-2 md:grid-cols-6 gap-2 mb-8">
                         {study.gallery.map((image, idx) => (
                           <div key={idx} className="relative w-full aspect-square rounded-lg overflow-hidden">
                             <Image
