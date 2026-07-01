@@ -6,12 +6,17 @@ export default {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
+        background: 'rgb(var(--background) / <alpha-value>)',
+        foreground: 'rgb(var(--foreground) / <alpha-value>)',
+        primary: '#EE0054',
+        secondary: '#00BDED',
+        accentYellow: '#EDD900',
+        accentMaroon: '#983356',
+        accentTeal: '#37636E',
+        accentBrown: '#3C2A1E',
       },
     },
   },

@@ -3,15 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: 233 230 213;
+  --foreground: 43 43 43;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background) url('https://strgdsysburtcher.blob.core.windows.net/bway/images/bw-background.webp') top center no-repeat;
-  background-size: 100% auto;
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground));
+  background: rgb(var(--background));
 }
 
 @layer utilities {
@@ -24,23 +22,81 @@ html {
   scroll-behavior: smooth;
 }
 
-.text-glow {
-  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5), 0 0 20px rgba(59, 130, 246, 0.3), 0 0 30px rgba(59, 130, 246, 0.2);
-  transition: text-shadow 0.3s ease;
+.accent-teal {
+  color: #37636E;
 }
 
-.text-glow:hover {
-  text-shadow: 0 0 10px rgba(236, 72, 153, 0.7), 0 0 20px rgba(236, 72, 153, 0.5), 0 0 30px rgba(236, 72, 153, 0.3);
+.accent-maroon {
+  color: #983356;
 }
 
-.accent-blue {
-  color: #7dd3fc;
-  text-shadow: 0 0 10px rgba(56, 189, 248, 0.35);
+/* Persistent tricolour stripe, sticky at the top of every page */
+.site-stripe {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
 }
 
-.accent-pink {
-  color: #ff5db1;
-  text-shadow: 0 0 10px rgba(255, 45, 149, 0.42), 0 0 18px rgba(255, 45, 149, 0.2);
+.site-stripe-bands {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-stripe-bands span {
+  flex: 1;
+}
+
+.site-stripe-bands span:nth-child(1) {
+  background: #EDD900;
+}
+
+.site-stripe-bands span:nth-child(2) {
+  background: #983356;
+}
+
+.site-stripe-bands span:nth-child(3) {
+  background: #37636E;
+}
+
+/* Morse code for "lets have fun" woven through the stripe as a drifting ticker */
+.site-stripe-morse {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.site-stripe-morse-track {
+  display: flex;
+  gap: 3em;
+  white-space: nowrap;
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  color: rgb(var(--background));
+  animation: stripeDrift 40s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-stripe-morse-track {
+    animation: none;
+  }
+}
+
+@keyframes stripeDrift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .services-wall {
@@ -65,16 +121,16 @@ html {
   font-size: 0.75rem;
   letter-spacing: 0.06em;
   text-transform: lowercase;
-  color: rgba(237, 237, 237, 0.48);
+  color: rgba(43, 43, 43, 0.45);
   font-weight: 400;
 }
 
 .services-word:nth-child(3n) {
-  color: rgba(237, 237, 237, 0.72);
+  color: rgba(152, 51, 86, 0.7);
 }
 
 .services-word:nth-child(5n) {
-  color: rgba(237, 237, 237, 0.35);
+  color: rgba(55, 99, 110, 0.75);
 }
 
 @keyframes servicesDrift {
