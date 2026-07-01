@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import CaseStudies from '@/components/CaseStudies'
 import StickyHeader from '@/components/StickyHeader'
+import FaqBoxout from '@/components/FaqBoxout'
+import ContactCta from '@/components/ContactCta'
 
 export default function Home() {
   const services = [
@@ -66,8 +68,11 @@ export default function Home() {
               ))}
             </div>
           </div>
+      <ContactCta />
+
         </div>
       </section>
+
 
       {/* Clients Section */}
       <section className="py-20 px-6">
@@ -112,50 +117,39 @@ export default function Home() {
       </section>
 
       {/* About Us Section */}
-      <section className="py-20 px-6">
+      <section className="pt-20 pb-4 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl md:text-6xl font-bold text-center mb-16 text-accentMaroon">About Us</h2>
+          <h2 className="text-5xl md:text-6xl font-bold text-center mb-16 text-accentMaroon">About The Company</h2>
           <div className="space-y-6 text-foreground/70 text-base leading-relaxed">
+          <p className="text-4xl"></p>
             <p className="text-xl font-medium">We offer <span className="accent-teal">bespoke creative</span> &amp; <span className="accent-maroon">digital services</span> for individual, charity and corporate clients who are looking to engage with the world in a different way.</p>
             <p>We like <span className="accent-teal">challenges</span>. We don&apos;t think challenges have to mean stress. We like to <span className="accent-maroon">solve problems</span>, be helpful, and have some fun.</p>
-            <p> <span className="accent-maroon">Breadth of experience is our strength</span>. We can deliver bread and butter needs like getting your website up and running with essential <span className="accent-teal">SEO and analytics</span>, performance tweaks and content suggestions to accelerate your reach.</p>
-            <p>We can also help you with more complex (or weirder) projects that require a blend of <span className="accent-maroon">creativity</span> and <span className="accent-teal">technical expertise</span>, like delivering the front- and back-ends of your cloud-based immersive adventure game festival app, <em>and</em> helping you script and direct the live actor encounter you&apos;ve planned for midnight on the final day.</p>
+            <p> <span className="accent-maroon">Breadth of experience is our strength</span>, from live events to digital experiences. </p>
+            <p>We can deliver bread and butter digital needs like getting your website built and armed with essential <span className="accent-teal">SEO, analytics</span> and content suggestions to help you do whatever it is you're trying to do: run a business, advertise your brand or engage your audience.</p>
+            <p>We offer <span className="accent-maroon">creative services</span> like <span className="accent-teal">writing, direction, ideation</span> and <span className="accent-maroon">production</span> for live events, immersive experiences, interactive stories and games.</p>
+            <p>We are well suited to help you with more complex (or weirder) projects that require a blend of <span className="accent-maroon">creativity</span> and <span className="accent-teal">technical expertise</span>, like delivering the front- and back-ends of your cloud-based immersive adventure game festival app, <em>and</em> helping you script and direct the live actor encounter you&apos;ve planned for midnight on the final day.</p>
             <p>We work with talented people from a variety of disciplines to handle both the creative stuff - <span className="accent-maroon">writing, direction, ideation</span> - and the technical stuff - <span className="accent-teal">development, design, production</span>.</p>
             <p>Past projects include <span className="accent-maroon">unique live experiences</span> and events combining adventure, games, technology and performances, from big festival productions to <span className="accent-teal">one-to-one encounters</span>.</p>
             <p>We also make creative purely digital experiences like <span className="accent-teal">games, puzzles and online stories</span> (which are better for you than doomscrolling).</p>
-            <p>We especially love projects which <span className="accent-maroon">combine the two</span>.</p>
+            <p>We especially love projects which <span className="accent-maroon">combine lots of these things at once.</span>.</p>
           </div>
         </div>
       </section>
 
-       {/* Contact Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8 text-accentMaroon">Contact Us</h2>
-          <a
-            href="mailto:mat@burtcherway.com"
-            className="inline-block text-accentMaroon hover:scale-110 hover:text-accentTeal transition-all duration-200"
-            title="mat@burtcherway.com"
-          >
-            <svg
-              width="48"
-              height="48"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-          </a>
+      <ContactCta />
+
+      {/* Boxout Section */}
+      <section className="px-6 pb-20">
+        <div className="max-w-4xl mx-auto">
+          <FaqBoxout />
         </div>
       </section>
 
+
       {/* Case Studies Section */}
       <CaseStudies />
+
+      <ContactCta />
 
       {/* Projects Section */}
       <section className="py-20">
@@ -233,7 +227,7 @@ export default function Home() {
         </div>
       </section>
 
-     
+      <ContactCta />
 
       {/* Copyright Section */}
       <section className="py-8 px-6">

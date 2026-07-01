@@ -56,6 +56,13 @@ body {
   transform: rotate(-2deg);
 }
 
+.faq-question {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: rgb(var(--background));
+  text-transform: lowercase;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
