@@ -48,10 +48,7 @@ export default function StickyHeader() {
 
       {/* Docked bar: fixed to the viewport top, slides/fades in once the
           natural stripe above has scrolled out of view */}
-      <div
-        className={`site-stripe-docked ${docked ? 'site-stripe-docked--visible' : ''}`}
-        aria-hidden={!docked}
-      >
+      <div className={`site-stripe-docked ${docked ? 'site-stripe-docked--visible' : ''}`} aria-hidden={!docked} >
         <span className="site-stripe-logo blur-ultra-soft text-cream">BurtcherWay</span>
 
         <StripeBands count={3} />
