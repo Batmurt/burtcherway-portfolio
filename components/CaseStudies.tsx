@@ -40,7 +40,7 @@ const caseStudies: CaseStudy[] = [
 
   {
     id: 'sports-activation',
-    title: 'Game Changers Live: UEFA Women's Champions League Final',
+    title: 'Game Changers Live: UEFA Women\'s Champions League Final',
     body: 'A weekend long celebration of the UWCLF Final in Oslo, bringing together fans, creatives, athletes and leading voices on behalf of PepsiCo, with guest contributors VERSUS. Featuring a panel with Ian Wright and Sarina Wiegman, a special appearance from Steph Houghton and a full fashion show and concert from leading Norwegian popstar Julie Bergan. Burtcher Way provided event scripts, experience design for audience activities, directed the event hosts James Threlfall and Kristine Arntzen and ran the main stage&apos;s showcaller duties throughout the weekend.',
     date: '2026',
     collaborators: 'FUSE, PepsiCo, VERSUS',
